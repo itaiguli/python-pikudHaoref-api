@@ -29,7 +29,7 @@ The data comes from the library in the following format:
 With the library you can:
   - Listen to new rocket alerts, and get the Data into your `Alerts_Handler` function.
   - You can choose to receive only alerts from certain cities !
-  - Get the latest alert history, by different times and languages.
+  - Get the latest alerts history, with time filtering and different languages.
 
 tzevaadom is open source with a [public repository](https://github.com/itaiguli/python-pikudHaoref-api/) on GitHub.
 

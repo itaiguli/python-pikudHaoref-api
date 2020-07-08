@@ -15,7 +15,7 @@ setup(
   author = 'Itai Guli',
   author_email = 'app.redalert@gmail.com',
   url = 'https://github.com/itaiguli',
-  download_url = 'https://github.com/itaiguli/guli/archive/v_01.tar.gz',
+  download_url = 'https://github.com/itaiguli/python-pikudHaoref-api/archive/1.0.tar.gz',
   keywords = ['tzevaadom', 'pikud', 'oref', 'redalert', 'rocket'],
   install_requires=[],
   classifiers=[

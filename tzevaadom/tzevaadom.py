@@ -12,17 +12,17 @@ with open(folder+'/cities.json', encoding='utf-8-sig') as cities_json:
     cities = cities_json.read()
     cities = json.loads(cities)
 
-def alerts_history(language="he", get_from="today"):
+def alerts_history(language="he", get_from="today", date_from="12.05.2021", date_to="12.05.2021"):
   options_languages = ["he","en","ru","ar"]
-  options_date = ["today", "week", "month"]
+  options_date = ["dates", "today", "week", "month",] # dates=0, today=1, week=2, month=3
 
   if language not in options_languages:
     return SyntaxError(language+" option is not exists. only: he/en/ru/ar")
   
   if get_from not in options_date:
     return SyntaxError(get_from + " is not exists. only: today/week/month")
-
-  return requests.get("https://www.oref.org.il/Shared/Ajax/GetAlarmsHistory.aspx?lang={}&mode={}".format(language, options_date.index(get_from)+1)).json()
+    
+  return requests.get("https://www.oref.org.il/Shared/Ajax/GetAlarmsHistory.aspx?lang={}&mode={}&fromDate={}&toDate={}".format(language, options_date.index(get_from), date_from, date_to)).json()
 
 def __format_alerts__(alert_areas):
   format_list = []

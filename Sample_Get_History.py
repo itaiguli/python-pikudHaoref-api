@@ -14,3 +14,6 @@ print(history_english)
 
 history_arabic = tzevaadom.alerts_history(language="ar", get_from="week")
 print(history_arabic)
+
+history_english_date_range = tzevaadom.alerts_history(language=lang, get_from="dates",date_from="10.05.2021", date_to="21.05.2021")
+print(history_english_date_range)

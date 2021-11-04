@@ -1,4 +1,4 @@
-# python-pikudHaoref-api
+# Python | Pikud Haoref Api
 A Python library for Pikud Haoref's unofficial rocket alert API.
 https://www.tzevaadom.co.il
 

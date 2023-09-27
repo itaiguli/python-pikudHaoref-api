@@ -51,7 +51,7 @@ class __main__:
     while self.running:
       try:
         time.sleep(2) # important to not crash
-        response = requests.get("https://www.oref.org.il/WarningMessages/Alert/alerts.json", headers={"X-Requested-With":"XMLHttpRequest","Referer":"https://www.oref.org.il/"})
+        response = requests.get("https://www.oref.org.il/WarningMessages/alert/alerts.json", headers={"X-Requested-With":"XMLHttpRequest","Referer":"https://www.oref.org.il/"})
         if len(response.content) > 5 and response.status_code == 200:
           list_oref = json.loads((response.content).decode('utf8'))["data"]
           filtered_areas = list({area for (area) in (list_oref) if (area not in self.last_data) and (self.filter == [] or (area) in self.filter) or (list_oref.count(area) > 1 and self.last_data.count(area) == 1)})
